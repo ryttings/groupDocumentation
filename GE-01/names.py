@@ -1,6 +1,4 @@
 print("Team 3")
-print("Scott Rytting")
-#conflict created!
-print("Christopher Colvin")
-
-#This will create a conflict!!
+print("CONFLICTED")
+#please actually make a conflict this time
+print("Moral Conflict")
