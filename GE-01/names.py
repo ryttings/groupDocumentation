@@ -1,3 +1,3 @@
 print("Team 3")
-print("Scott Rytting")
-print("Christopher Colvin")
+print("Captain Crunch")
+print("Chris Colvin")
