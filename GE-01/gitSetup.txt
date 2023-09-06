@@ -2,7 +2,7 @@ Github Repository: https://github.com/ryttings/groupDocumentation
 
 To setup:
 
-1. Install GitHub Desktop (Look here --> https://desktop.github.com/)
+1. Install GitHub for Windows (or your preferred OS) (Look here --> https://git-scm.com/download/)
 1a. Make sure that you use Git Credential Manager!
 2. Open Git Bash
 3. Navigate to the directory where you want the git repository (User/Documents for example)
