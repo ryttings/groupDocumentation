@@ -19,8 +19,9 @@ class Student(models.Model):
         
     )#end of major
 
-    email = models.CharField("UCCS Email", max_length=200, default="example@uccs.edu")
-    major = models.CharField(max_length=200, choices=MAJOR,)
+    name = models.CharField(max_length=200)
+    email = models.CharField("UCCS Email", max_length=200)
+    major = models.CharField(max_length=200, choices=MAJOR)#, blank = True)
 
     def __str__(self):
         return self.name
