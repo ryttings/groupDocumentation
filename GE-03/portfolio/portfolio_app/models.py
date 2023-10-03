@@ -20,7 +20,7 @@ class Portfolio(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200, default=timezone.now)
     description = models.TextField()
-    #portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, default = None)
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, default = None)
 
     def __str__(self):
         return self.title
