@@ -32,6 +32,9 @@ class ProjectsInPortfolio(models.Model):
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return str(self.portfolio) + ' & ' + str(self.project)
+
 class Meta:
     unique_together = ('portfolio', 'project')
 
