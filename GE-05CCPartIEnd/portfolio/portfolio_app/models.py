@@ -27,7 +27,7 @@ class Project(models.Model):
     
     def get_absolute_url(self):
         return reverse('project-detail', args=[str(self.id)])
-
+"""
 class ProjectsInPortfolio(models.Model):
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
@@ -37,7 +37,7 @@ class ProjectsInPortfolio(models.Model):
 
 class Meta:
     unique_together = ('portfolio', 'project')
-
+"""
 class Student(models.Model):
     #List of choices for majors
     MAJOR =(
