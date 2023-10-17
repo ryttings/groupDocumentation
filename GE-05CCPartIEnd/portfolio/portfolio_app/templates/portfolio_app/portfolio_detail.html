@@ -10,9 +10,9 @@
 <h2>Project List</h2>
 <ul class="list-group">
 {% for i in student_portfolio_projects %}
-<li class="list-group-item"><strong>Project: {{i.project.title}}
-<p>Description: {{i.project.description}}
-<a class="btn btn-primary" href="{{i.project.get_absolute_url}}" role="button">View</a>
+<li class="list-group-item"><strong>Project: {{i.title}}
+<p>Description: {{i.description}}
+<a class="btn btn-primary" href="{{i.get_absolute_url}}" role="button">View</a>
 </li>
 {% endfor %}
 </ul>

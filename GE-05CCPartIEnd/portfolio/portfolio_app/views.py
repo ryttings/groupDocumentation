@@ -21,15 +21,15 @@ class PortfolioListView(generic.ListView):
     model = Portfolio
 class PortfolioDetailView(generic.DetailView):
     model = Portfolio
-    projects = Project.objects.all()
-    student_portfolio_projects = None
-    for project in projects:
-        if project.portfolio == model.title:
-            student_portfolio_projects.append(project)
-
+    
     def get_context_data(self, **kwargs):
+        projects = Project.objects.all()
+        student_portfolio_projects = []
+        for project in projects:
+            if project.portfolio.title == self.object.title:
+                student_portfolio_projects.append(project)
         context = super(PortfolioDetailView, self).get_context_data( **kwargs)
-        context["student_portfolio_projects"] = "Joe"
+        context["student_portfolio_projects"] = student_portfolio_projects
         return context
 
     def __str__(self):
