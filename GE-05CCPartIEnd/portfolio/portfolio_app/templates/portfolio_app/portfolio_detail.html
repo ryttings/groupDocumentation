@@ -1,0 +1,20 @@
+{% extends 'portfolio_app/base_template.html' %}
+
+{% block content %}
+<h1>Portfolio Title: {{ portfolio.title }}</h1>
+
+<p><strong>Contact Email:</strong> {{ portfolio.contact_email }}</p>
+<p><strong>Is Active:</strong> {{ portfolio.is_active }}</p>
+<p><strong>About:</strong> {{ portfolio.about }}</p>
+
+<h2>Project List</h2>
+<ul class="list-group">
+{% for i in student_portfolio_projects %}
+<li class="list-group-item"><strong>Project: {{i.title}}
+<p>Description: {{i.description}}
+<a class="btn btn-primary" href="{{i.get_absolute_url}}" role="button">View</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
