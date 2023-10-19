@@ -20,7 +20,7 @@ class Portfolio(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200, default=timezone.now)
     description = models.TextField()
-    #portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, default = None)
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, default = None, null = True)
 
     def __str__(self):
         return self.title
@@ -28,15 +28,8 @@ class Project(models.Model):
     def get_absolute_url(self):
         return reverse('project-detail', args=[str(self.id)])
 
-class ProjectsInPortfolio(models.Model):
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
-
-class Meta:
-    unique_together = ('portfolio', 'project')
-
 class Student(models.Model):
-    #List of choices for majors
+    #List of choices for majrs
     MAJOR =(
         ('CSCI-BS', 'BS in Computer Science'),
         ('CPEN-BS', 'BS in Computer Engineering'),
